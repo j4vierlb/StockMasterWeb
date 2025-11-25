@@ -70,26 +70,29 @@
 			margin-top: 10px;
 		}
 	</style>
-<head>
+</head>
+<body>
 	<div class="container">
 		<h1>StockMaster</h1>
-	<p class="subtitle">Descarga la app oficial para Android</p>
-	<!-- QR para escritorio -->
-	<div class="qr-section">
+		<p class="subtitle">Descarga la app oficial para Android</p>
+		<!-- QR para escritorio -->
+		<div class="qr-section">
 			<h3>Escanea para descargar</h3>
 			<img id="qr-code" alt="QR Code" style="width:220px;height:220px;">
 			<p style="font-size:0.9em;color:#a0aec0;">O copia esta URL:<br><code id="download-url" style="background:#f7fafc;padding:5px 10px;border-radius:5px;font-size:0.85em;"></code></p>
-	</div>
-	<!-- Botón para móvil -->
-	<div class="mobile-download">
-			<a href="https://github.com/j4vierlb/StockMaster1/raw/main/stockmaster/APK/StockMaster.apk" class="download-btn" download>📥 Descargar APK</a>
+		</div>
+		<!-- Botón para móvil -->
+		<div class="mobile-download">
+			<a href="https://j4vierlb.github.io/StockMasterWeb/StockMaster.apk" class="download-btn" download>📥 Descargar APK</a>
 			<div class="file-info">Tamaño: ~16 MB | Android 7.0+</div>
 		</div>
 		<div style="margin-top:30px;color:#a0aec0;font-size:0.9em;">© 2025 StockMaster</div>
 	</div>
 	<script>
 	// URL pública del APK en GitHub Pages
-const apkUrl = 'https://j4vierlb.github.io/StockMasterWeb/StockMaster.apk';
-document.getElementById('qr-code').src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(apkUrl);
-document.getElementById('download-url').textContent = apkUrl;
+	const apkUrl = 'https://j4vierlb.github.io/StockMasterWeb/StockMaster.apk';
+	document.getElementById('qr-code').src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(apkUrl);
+	document.getElementById('download-url').textContent = apkUrl;
 	</script>
+</body>
+</html>
