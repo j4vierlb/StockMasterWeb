@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Descargar StockMaster APK</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.container {
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+			max-width: 400px;
+			width: 100%;
+			padding: 32px;
+			text-align: center;
+		}
+		h1 {
+			color: #2d3748;
+			font-size: 2em;
+			margin-bottom: 10px;
+		}
+		.subtitle {
+			color: #718096;
+			margin-bottom: 24px;
+		}
+		.download-btn {
+			display: inline-block;
+			margin-top: 24px;
+			padding: 16px 32px;
+			font-size: 1.1em;
+			color: #fff;
+			background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+			border: none;
+			border-radius: 12px;
+			text-decoration: none;
+			font-weight: bold;
+			box-shadow: 0 4px 16px rgba(102,126,234,0.2);
+			transition: background 0.3s, transform 0.2s;
+		}
+		.download-btn:hover {
+			background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+			transform: scale(1.05);
+		}
+		.qr-section {
+			display: none;
+			margin: 24px 0;
+		}
+		.mobile-download {
+			display: none;
+		}
+		@media (min-width: 769px) {
+			.qr-section { display: block; }
+			.mobile-download { display: none; }
+		}
+		@media (max-width: 768px) {
+			.qr-section { display: none; }
+			.mobile-download { display: block; }
+		}
+		.file-info {
+			color: #718096;
+			font-size: 0.95em;
+			margin-top: 10px;
+		}
+	</style>
+<head>
+	<div class="container">
+		<h1>StockMaster</h1>
+	<p class="subtitle">Descarga la app oficial para Android</p>
+	<!-- QR para escritorio -->
+	<div class="qr-section">
+			<h3>Escanea para descargar</h3>
+			<img id="qr-code" alt="QR Code" style="width:220px;height:220px;">
+			<p style="font-size:0.9em;color:#a0aec0;">O copia esta URL:<br><code id="download-url" style="background:#f7fafc;padding:5px 10px;border-radius:5px;font-size:0.85em;"></code></p>
+	</div>
+	<!-- Botón para móvil -->
+	<div class="mobile-download">
+			<a href="StockMaster.apk" class="download-btn" download>📥 Descargar APK</a>
+			<div class="file-info">Tamaño: ~16 MB | Android 7.0+</div>
+		</div>
+		<div style="margin-top:30px;color:#a0aec0;font-size:0.9em;">© 2025 StockMaster</div>
+	</div>
+	<script>
+	// URL del APK (ajusta si lo subes a otro lugar)
+	const apkUrl = 'StockMaster.apk';
+	document.getElementById('qr-code').src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(window.location.origin + '/' + apkUrl);
+		document.getElementById('download-url').textContent = window.location.origin + '/' + apkUrl;
+	</script>
