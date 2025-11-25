@@ -88,8 +88,8 @@
 		<div style="margin-top:30px;color:#a0aec0;font-size:0.9em;">© 2025 StockMaster</div>
 	</div>
 	<script>
-	// URL del APK (ajusta si lo subes a otro lugar)
-	const apkUrl = 'StockMaster.apk';
-	document.getElementById('qr-code').src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(window.location.origin + '/' + apkUrl);
-		document.getElementById('download-url').textContent = window.location.origin + '/' + apkUrl;
+	// URL pública del APK en GitHub Pages
+const apkUrl = 'https://j4vierlb.github.io/StockMasterWeb/StockMaster.apk';
+document.getElementById('qr-code').src = 'https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=' + encodeURIComponent(apkUrl);
+document.getElementById('download-url').textContent = apkUrl;
 	</script>
